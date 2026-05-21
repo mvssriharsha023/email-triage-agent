@@ -50,4 +50,10 @@ def responder_node(state: EmailAgentState):
 
     state["response_draft"] = reply
 
+    state["sent"] = False
+
+    state["human_approved"] = False
+
+    state["final_response"] = None
+
     return state

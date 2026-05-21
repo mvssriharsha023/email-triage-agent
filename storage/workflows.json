@@ -1,0 +1,22 @@
+[
+    {
+        "email": "\n    Hi, You have a lottery of $10 million and a free IPhone 15 waiting for you.\n    Please click on the below link to claim your prize.\n    ",
+        "is_spam": true
+    },
+    {
+        "email": "\n    Hi Team,\n    The production servers are experiencing high latency and some requests are timing out.\n    This issue is impacting our customers and needs urgent attention.\n    Please investigate and resolve this as soon as possible.\n\n    Thank you,\n    John Doe\n    ",
+        "is_spam": false,
+        "category": "technical",
+        "urgency": "high",
+        "tasks": [
+            "1. Investigate production server high latency issue.",
+            "2. Resolve the latency issue affecting customer requests.",
+            "3. Attend to the urgently needing resolution for customer impacting problem."
+        ],
+        "assigned_to": "Engineering Team",
+        "response_draft": "Subject: Re: Production Server High Latency Issue - Urgent Action Required\n\nDear John Doe,\n\nThank you for bringing the production server high latency issue to our attention. We understand the urgency of this matter and its impact on our customers.\n\nThe Engineering Team has been assigned to investigate and resolve this issue promptly. They are currently working diligently to identify the root cause and implement a resolution.\n\nWe will keep you updated on our progress and expected timeline for resolution. In the meantime, please inform us if there are any specific customer requests that require immediate attention due to the latency issue.\n\nThank you for your patience and cooperation.\n\nBest Regards,\n[Your Name]\n[Your Position]",
+        "human_approved": false,
+        "final_response": null,
+        "sent": false
+    }
+]

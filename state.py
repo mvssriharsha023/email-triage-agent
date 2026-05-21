@@ -18,4 +18,8 @@ class EmailAgentState(TypedDict):
 
     response_draft: Optional[str]
 
-    confidence: Optional[float]
+    human_approved: Optional[bool]
+
+    final_response: Optional[str]
+
+    sent: Optional[bool]

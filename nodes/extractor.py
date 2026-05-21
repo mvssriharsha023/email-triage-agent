@@ -1,8 +1,10 @@
 from state import EmailAgentState
 from models.llm import llm
-
+from utils.loggers import logger
 
 def extractor_node(state: EmailAgentState):
+
+    logger.info("Running extractor node")
 
     email = state["email"]
 
@@ -26,6 +28,8 @@ def extractor_node(state: EmailAgentState):
 
     result = response.content.strip()
 
+    logger.info(f"Extracted tasks: {result}")
+
     if result == "NO_TASKS":
         state["tasks"] = []
     else:
@@ -38,5 +42,7 @@ def extractor_node(state: EmailAgentState):
         ]
 
         state["tasks"] = cleaned_tasks
+    
+    logger.info(f"Updated state: {state}")
 
     return state

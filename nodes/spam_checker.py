@@ -1,7 +1,10 @@
 from state import EmailAgentState
 from models.llm import llm
+from utils.loggers import logger
 
 def spam_checker_node(state: EmailAgentState):
+
+    logger.info("Running spam checker node")
     
     email = state["email"]
 
@@ -23,9 +26,13 @@ def spam_checker_node(state: EmailAgentState):
 
     result = response.content.strip()
 
+    logger.info(f"Spam classification result: {result}")
+
     if result == "SPAM":
         state["is_spam"] = True
     else:
         state["is_spam"] = False
+
+    logger.info(f"Updated state: {state}")
     
     return state

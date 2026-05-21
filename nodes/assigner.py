@@ -1,13 +1,9 @@
 from state import EmailAgentState
-
+from utils.loggers import logger
 
 def assigner_node(state: EmailAgentState):
 
-    tasks = state.get("tasks", [])
-
-    # if not tasks:
-    #     state["assigned_to"] = None
-    #     return state
+    logger.info("Running assigner node")
 
     category = state["category"]
 
@@ -26,4 +22,8 @@ def assigner_node(state: EmailAgentState):
 
     state["assigned_to"] = assigned_to
 
+    logger.info(f"Email assigned to: {assigned_to}")
+
+    logger.info(f"Updated state: {state}")
+    
     return state

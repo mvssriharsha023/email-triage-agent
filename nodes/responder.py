@@ -1,8 +1,10 @@
 from state import EmailAgentState
 from models.llm import llm
-
+from utils.loggers import logger
 
 def responder_node(state: EmailAgentState):
+
+    logger.info("Running responder node")
 
     email = state["email"]
 
@@ -48,6 +50,8 @@ def responder_node(state: EmailAgentState):
 
     reply = response.content.strip()
 
+    logger.info(f"Generated response draft: {reply}")
+
     state["response_draft"] = reply
 
     state["sent"] = False
@@ -55,5 +59,7 @@ def responder_node(state: EmailAgentState):
     state["human_approved"] = False
 
     state["final_response"] = None
+
+    logger.info(f"Updated state: {state}")
 
     return state

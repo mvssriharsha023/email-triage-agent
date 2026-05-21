@@ -1,7 +1,10 @@
 from state import EmailAgentState
 from models.llm import llm
+from utils.loggers import logger
 
 def urgency_detector_node(state: EmailAgentState) -> EmailAgentState:
+
+    logger.info("Running urgency detector node")
 
     email = state["email"]
 
@@ -41,6 +44,10 @@ def urgency_detector_node(state: EmailAgentState) -> EmailAgentState:
 
     urgency = response.content.strip().lower()
     
+    logger.info(f"Email urgency classified as: {urgency}")
+
     state["urgency"] = urgency
+
+    logger.info(f"Updated state: {state}")
 
     return state

@@ -1,8 +1,11 @@
 from state import EmailAgentState
 from models.llm import llm
+from utils.loggers import logger
 
 def classifier_node(state: EmailAgentState) -> EmailAgentState:
     email = state["email"]
+
+    logger.info("Running classifier node")
 
     prompt = f"""
     You are an email classification system.
@@ -37,6 +40,10 @@ def classifier_node(state: EmailAgentState) -> EmailAgentState:
 
     category = response.content.strip().lower()
 
+    logger.info(f"Email classified as: {category}")
+
     state["category"] = category
+
+    logger.info(f"Updated state: {state}")
 
     return state

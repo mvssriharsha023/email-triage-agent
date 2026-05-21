@@ -18,5 +18,38 @@
         "human_approved": false,
         "final_response": null,
         "sent": false
+    },
+    {
+        "email": "\n    Hi Team,\n    The production servers are experiencing high latency and some requests are timing out.\n    This issue is impacting our customers and needs urgent attention.\n    Please investigate and resolve this as soon as possible.\n\n    Thank you,\n    John Doe\n    ",
+        "is_spam": false,
+        "category": "technical",
+        "urgency": "high",
+        "tasks": [
+            "1. Investigate production server high latency issue.",
+            "2. Resolve the latency issue affecting customer requests.",
+            "3. Attend to the urgently needed resolution for customer impacting problem."
+        ],
+        "assigned_to": "Engineering Team",
+        "response_draft": "Subject: Re: High Latency on Production Servers - Urgent Action Required\n\nDear John,\n\nThank you for bringing this matter to our attention. We are aware of the high latency issue affecting our production servers and the subsequent impact on customer requests.\n\nOur Engineering Team has been assigned to investigate this issue and work towards a swift resolution. They will prioritize this task and aim to address it as soon as possible to minimize disruption to our services.\n\nWe appreciate your patience and understanding in this matter, and we will keep you updated on our progress.\n\nBest Regards,\n[Your Name]\n[Your Position]",
+        "human_approved": false,
+        "final_response": null,
+        "sent": false
+    },
+    {
+        "email": "\n    Hi Team,\n    The production servers are experiencing high latency and some requests are timing out.\n    This issue is impacting our customers and needs urgent attention.\n    Please investigate and resolve this as soon as possible.\n\n    Thank you,\n    John Doe\n    ",
+        "is_spam": false,
+        "category": "technical",
+        "urgency": "high",
+        "tasks": [
+            "1. Investigate production server high latency issue.",
+            "2. Resolve the server latency problem causing request timeouts.",
+            "3. Address the impact on customers due to server latency.",
+            "4. Prioritize this urgent issue for immediate resolution."
+        ],
+        "assigned_to": "Engineering Team",
+        "response_draft": "Subject: Re: Production Server Latency - Urgent Action Required\n\nDear John,\n\nThank you for bringing this matter to our attention. We are aware of the high latency issues affecting our production servers and resulting in request timeouts.\n\nOur Engineering Team has been assigned to investigate the issue and resolve it promptly. They will prioritize this urgent task for immediate resolution to minimize the impact on our customers.\n\nWe appreciate your patience and understanding as we work diligently to address this matter. We will provide updates as soon as more information becomes available.\n\nBest Regards,\n[Your Name]\n[Your Position]",
+        "human_approved": false,
+        "final_response": null,
+        "sent": false
     }
 ]
